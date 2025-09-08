@@ -1,11 +1,16 @@
 const { argv } = require('node:process');
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+
 if (argv.length < 3) {
   console.log('1');
 }
 else {
-    let fact = 1;
-    for (let i = 1; i <= parseInt(argv[2]); i++) {
-        fact *= i;
-    }
-    console.log(fact);
+    const num = parseInt(argv[2]);
+    console.log(num);
 }
